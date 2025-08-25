@@ -1,58 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel & Tours Booking</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1>ExploreAway Tours</h1>
-    <p class="tag">Find your next adventure</p>
+  <header>
+    <h1>Travel & Tours Booking</h1>
   </header>
 
-  <main class="container">
-    <section class="controls">
-      <input id="searchInput" type="search" placeholder="Search by destination or title" />
-
-      <label for="maxPrice">Max price: <span id="priceLabel">$9999</span></label>
-      <input id="maxPrice" type="range" min="0" max="5000" value="5000" />
-
-      <select id="sortSelect">
-        <option value="default">Sort: Recommended</option>
-        <option value="priceAsc">Price: Low → High</option>
-        <option value="priceDesc">Price: High → Low</option>
+  <div class="container">
+    <div class="search-filter">
+      <input type="text" id="search" placeholder="Search destination...">
+      <select id="priceFilter">
+        <option value="">Filter by price</option>
+        <option value="500">Below $500</option>
+        <option value="1000">Below $1000</option>
+        <option value="2000">Below $2000</option>
       </select>
-    </section>
-
-    <section id="toursGrid" class="tours-grid">
-    </section>
-
-    <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
-      <div class="modal-content">
-        <button id="closeModal" class="modal-close">✕</button>
-        <div id="modalBody">
-        </div>
-      </div>
     </div>
 
-    <aside class="newsletter">
-      <h3>Join our newsletter</h3>
-      <form id="newsletterForm">
-        <input id="newsletterEmail" type="email" placeholder="you@example.com" required />
-        <button type="submit">Subscribe</button>
+    <div class="tour-list" id="tourList"></div>
+  </div>
+
+  <div class="modal" id="tourModal">
+    <div class="modal-content">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <p><strong>Price:</strong> $<span id="modalPrice"></span></p>
+
+      <form id="bookingForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="number" id="travelers" placeholder="Number of Travelers" min="1" required>
+        <p><strong>Total Price:</strong> $<span id="totalPrice">0</span></p>
+        <button type="submit" class="btn">Book Now</button>
       </form>
-      <p id="newsletterMsg" class="small"></p>
-    </aside>
 
-    <section class="bookings">
-      <h3>Your saved bookings (localStorage)</h3>
-      <ul id="bookingsList"></ul>
-    </section>
-  </main>
+      <br>
+      <button class="btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
 
-  
+  <footer>
+    <p>&copy; 2025 Travel & Tours. All Rights Reserved.</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
