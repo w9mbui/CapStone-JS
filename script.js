@@ -4,6 +4,7 @@ const tours = [
   { id: 3, title: "Beach Holiday Maldives", desc: "Relax in crystal clear waters.", price: 1500 },
   { id: 4, title: "New York City Tour", desc: "Discover the city that never sleeps.", price: 1000 },
   { id: 5, title: "Tokyo Experience", desc: "Dive into the heart of Japan.", price: 1800 },
+  
 ];
 
 const tourList = document.getElementById("tourList");
