@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'EB Garamond', sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #333;
+}
+header h1 {
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+header a.btn {
+  margin-top: 0.5rem;
+  display: inline-block;
+  font-size: 0.9rem;
+  background: #43a092;
+}
+
+header a.btn:hover {
+  background: #265f65;
+}

@@ -1,9 +1,10 @@
 const tours = [
-  { id: 1, title: "Paris Getaway", desc: "Experience the city of love and lights.", price: 1200 },
-  { id: 2, title: "Safari Adventure", desc: "Explore the wildlife of Kenya.", price: 800 },
-  { id: 3, title: "Beach Holiday Maldives", desc: "Relax in crystal clear waters.", price: 1500 },
-  { id: 4, title: "New York City Tour", desc: "Discover the city that never sleeps.", price: 1000 },
-  { id: 5, title: "Tokyo Experience", desc: "Dive into the heart of Japan.", price: 1800 },
+  { id: 1, title: "Paris Getaway", desc: "Experience the city of love and lights.", price: 1200, image: "images/paris.jpg" },
+  { id: 2, title: "Safari Adventure", desc: "Explore the wildlife of Kenya.", price: 800, image:"images/safari.webp" },
+  { id: 3, title: "Beach Holiday Maldives", desc: "Relax in crystal clear waters.", price: 1500, image: "images/maldives.webp" },
+  { id: 4, title: "New York City Tour", desc: "Discover the city that never sleeps.", price: 1000, image:"images/newyork.jpg" },
+  { id: 5, title: "Tokyo Experience", desc: "Dive into the heart of Japan.", price: 1800, image: "images/tokyo.webp" },
+  { id: 6, title: "One of the 7 Wonders", desc:"Visit Machu Picchu One of the current seven wonders", price: 2200, image:"images/macchuuuu.jpg" },
   
 ];
 
@@ -12,6 +13,7 @@ const modal = document.getElementById("tourModal");
 const modalTitle = document.getElementById("modalTitle");
 const modalDesc = document.getElementById("modalDesc");
 const modalPrice = document.getElementById("modalPrice");
+const modalImage = document.getElementById("modalImage");
 const bookingForm = document.getElementById("bookingForm");
 const totalPriceEl = document.getElementById("totalPrice");
 let selectedTour = null;
@@ -40,6 +42,7 @@ function openModal(id) {
   modalTitle.innerText = selectedTour.title;
   modalDesc.innerText = selectedTour.desc;
   modalPrice.innerText = selectedTour.price;
+  modalImage.src = selectedTour.image;
   totalPriceEl.innerText = selectedTour.price;
   modal.style.display = "flex";
 }

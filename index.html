@@ -1,51 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel & Tours Booking</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>Travel & Tours Booking</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel & Tours Booking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="links">
+        <h1>Travel & Tours Booking</h1> <br> <hr>
+        <a href="booking.html"><b>Bookings</b></a>
+      </nav>
+    </header>
 
-  <div class="container">
-    <div class="search-filter">
-      <input type="text" id="search" placeholder="Search destination...">
-      <select id="priceFilter">
-        <option value="">Filter by price</option>
-        <option value="500">Below $500</option>
-        <option value="1000">Below $1000</option>
-        <option value="2000">Below $2000</option>
-      </select>
+    <div class="container">
+      <div class="search-filter">
+        <input type="text" id="search" placeholder="Search destination..." />
+        <select id="priceFilter">
+          <option value="">Filter by price</option>
+          <option value="500">Below $500</option>
+          <option value="1000">Below $1000</option>
+          <option value="2000">Below $2000</option>
+        </select>
+      </div>
+
+      <div class="tour-list" id="tourList"></div>
     </div>
 
-    <div class="tour-list" id="tourList"></div>
-  </div>
+    <div class="modal" id="tourModal">
+      <div class="modal-content">
+        <img id="modalImage" alt="tour image" class="modal-img" />
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <p><strong>Price:</strong> $<span id="modalPrice"></span></p>
 
-  <div class="modal" id="tourModal">
-    <div class="modal-content">
-      <h2 id="modalTitle"></h2>
-      <p id="modalDesc"></p>
-      <p><strong>Price:</strong> $<span id="modalPrice"></span></p>
+        <form id="bookingForm">
+          <input type="text" id="name" placeholder="Full Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="number"
+            id="travelers"
+            placeholder="Number of Travelers"
+            min="1"
+            required
+          />
+          <p><strong>Total Price:</strong> $<span id="totalPrice">0</span></p>
+          <button type="submit" class="btn">Book Now</button>
+        </form>
 
-      <form id="bookingForm">
-        <input type="text" id="name" placeholder="Full Name" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="number" id="travelers" placeholder="Number of Travelers" min="1" required>
-        <p><strong>Total Price:</strong> $<span id="totalPrice">0</span></p>
-        <button type="submit" class="btn">Book Now</button>
-      </form>
-
-      <br>
-      <button class="btn" onclick="closeModal()">Close</button>
+        <br />
+        <button class="btn" onclick="closeModal()">Close</button>
+      </div>
     </div>
-  </div>
 
-  
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
