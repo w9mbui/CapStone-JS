@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel & Tours Booking</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel & Tours Booking</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="links">
-        <h1>Travel & Tours Booking</h1> <br> <hr>
-        <a href="booking.html"><b>Bookings</b></a>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <header class="navbar">
+      <div class="logo">TourWithUs**</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Our tours</a></li>
+          <li><a href="booking.html">Booking</a></li>
+        </ul>
       </nav>
     </header>
 
-    <div class="container">
-      <div class="search-filter">
-        <input type="text" id="search" placeholder="Search destination..." />
-        <select id="priceFilter">
-          <option value="">Filter by price</option>
-          <option value="500">Below $500</option>
-          <option value="1000">Below $1000</option>
-          <option value="2000">Below $2000</option>
-        </select>
-      </div>
-
-      <div class="tour-list" id="tourList"></div>
+  <div class="container">
+    <div class="search-filter">
+      <input type="text" id="search" placeholder="Search destination...">
+      <select id="priceFilter">
+        <option value="">Filter by price</option>
+        <option value="500">Below $500</option>
+        <option value="1000">Below $1000</option>
+        <option value="2000">Below $2000</option>
+      </select>
     </div>
 
-    <div class="modal" id="tourModal">
-      <div class="modal-content">
-        <img id="modalImage" alt="tour image" class="modal-img" />
-        <h2 id="modalTitle"></h2>
-        <p id="modalDesc"></p>
-        <p><strong>Price:</strong> $<span id="modalPrice"></span></p>
+    <div class="tour-list" id="tourList"></div>
+  </div>
 
-        <form id="bookingForm">
-          <input type="text" id="name" placeholder="Full Name" required />
-          <input type="email" id="email" placeholder="Email" required />
-          <input
-            type="number"
-            id="travelers"
-            placeholder="Number of Travelers"
-            min="1"
-            required
-          />
-          <p><strong>Total Price:</strong> $<span id="totalPrice">0</span></p>
-          <button type="submit" class="btn">Book Now</button>
-        </form>
+  <div class="modal" id="tourModal">
+    <div class="modal-content">
+      <img id="modalImage" class="hero-img" src="" alt="">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc" class="modal-longdesc"></p>
+      <p><strong>Price:</strong> $<span id="modalPrice"></span></p>
 
-        <br />
-        <button class="btn" onclick="closeModal()">Close</button>
-      </div>
+      <h3>Trending Locations</h3>
+      <div id="modalLocations" class="locations-grid"></div>
+
+      <form id="bookingForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="number" id="travelers" placeholder="Number of Travelers" min="1" required>
+        <p><strong>Total Price:</strong> $<span id="totalPrice">0</span></p>
+        <button type="submit" class="btn">Book Now</button>
+      </form>
+
+      <button class="btn" onclick="closeModal()">Close</button>
     </div>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
