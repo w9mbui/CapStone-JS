@@ -7,7 +7,7 @@
 body {
   font-family:"EB Garamond",Arial, sans-serif;
   margin: 0;
-  background: #f4f6f8;
+  background: #e5dfd7;
   color: #333;
 }
 .navbar {
@@ -84,19 +84,20 @@ body {
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: #1e88e5;
+  background: #C1856D;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
   align-items: center;
+  margin-top: 20px;
 
 }
 
 
 .btn:hover {
-  background: #1565c0;
+  background: #ea8a65;
 }
 
 .modal {

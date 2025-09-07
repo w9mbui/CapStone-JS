@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">TourWithUs**</div>
+      <nav>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+          <li><a href="index.html">Our tours</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <h1>Have A Question??</h1>
+    </div>
+
+    <section class="contact-section">
+      <h2>Be Sure To Reach Out</h2>
+      <p>
+        When the overwhelming maze of online travel planning threatens to eclipse
+        the joy of the journey itself, contacting the expert consultants at Call
+        TourWithUs is your passage to effortless and enriched adventure; they
+        transform anxiety into anticipation by leveraging their seasoned
+        expertise and exclusive partnerships to craft a perfectly tailored
+        itinerary, secure coveted accommodations and unadvertised deals, and
+        handle every meticulous detail from start to finish, providing you with
+        not just a trip, but a seamless and supported experience where your only
+        job is to immerse yourself in the wonder of discovery.
+      </p>
+      <br />
+
+      <div class="form-contain">
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Name..." required />
+          <input type="email" id="email" placeholder="name@example.com" required />
+          <textarea id="message" placeholder="Message..." required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+
+        <div class="contact-info">
+          <p>
+            <b>Call Us:</b><br />
+            +245 567 778 739 <br />
+            +245 890 132 638 <br />
+            +245 789 909 759 <br />
+            +245 679 908 135
+          </p>
+
+          <p>
+            <b>Email:</b>
+            <a href="mailto:tourswithus@gmail.com">tourswithus@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !message) {
+          alert("Please fill in all fields.");
+          return;
+        }
+
+        alert("Thank you, " + name + "! Your message has been sent successfully.");
+        document.getElementById("contactForm").reset();
+      });
+    </script>
+  </body>
+</html>
+

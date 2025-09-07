@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: "EB Garamond", serif;
+  background: #e5dfd7;
+  color: #333;
+}
+
+.hero {
+  position: relative;
+  height: 300px;
+  background: url("herop2.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+
+.navbar ul li a.active {
+  text-decoration: underline;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.contact-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.form-contain {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  text-align: left;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+form textarea {
+  height: 120px;
+  resize: none;
+}
+
+form .captcha {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+form .captcha input {
+  width: 60px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+form button {
+  margin-top: 10px;
+  padding: 12px 25px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #555;
+}
+
+.contact-info {
+  font-size: 0.95rem;
+}
+
+.contact-info a {
+  color: #c77f40;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}

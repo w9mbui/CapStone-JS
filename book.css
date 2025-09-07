@@ -51,3 +51,44 @@ body {
 .navbar ul li a.active {
   text-decoration: underline;
 }
+/* Booking Card Styling */
+.booking-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.booking-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.booking-card p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.booking-card .btn-cancel {
+  background: #c97a5b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  margin-top: 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.booking-card .btn-cancel:hover {
+  background: #a55d3e;
+}
