@@ -92,3 +92,6 @@ body {
 .booking-card .btn-cancel:hover {
   background: #a55d3e;
 }
+.nav-links a:hover{
+  color: #e49e82;
+}

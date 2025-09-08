@@ -109,6 +109,9 @@ body {
   align-items: center;
   z-index: 1000;
 }
+.nav-links a:hover{
+  color: #e49e82;
+}
 
 .modal-content {
   background: white;

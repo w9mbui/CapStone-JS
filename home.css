@@ -34,6 +34,9 @@ body {
   color: #333;
   font-weight: 500;
 }
+.nav-links a:hover{
+  color: #e49e82;
+}
 
 .menu-icon {
   display: none;
@@ -128,4 +131,7 @@ body {
 }
 .navbar ul li a.active {
   text-decoration: underline;
+}
+.button:hover{
+  background: #e49e82;
 }

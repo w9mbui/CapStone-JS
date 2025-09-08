@@ -10,12 +10,12 @@ const tours = [
     locations: [
       {
         name: "Eiffel Tower",
-        image: "images/eiffel.jpg",
+        image: "images/eiff.jpg",
         details: ["Stunning night lights", "Elevator or stairs to top"],
       },
       {
         name: "Louvre Museum",
-        image: "images/louvre.jpg",
+        image: "images/glass.jpg",
         details: ["World's largest art museum", "Glass pyramid entrance"],
       },
     ],

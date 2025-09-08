@@ -23,6 +23,9 @@ body {
   padding: 1.5rem 2rem;
   background: white;
 }
+.nav-links a:hover{
+  color: #e49e82;
+}
 
 .logo {
   font-weight: bold;
